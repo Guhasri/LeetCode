@@ -1,14 +1,18 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        for (int i = 0 ; i < nums.size() ; i++ ){
-            for ( int j = i+1 ; j < nums.size() ; j++ ){
-                if ( nums[i] + nums[j] == target ){
-                    return { i , j };
 
-                }
-            }
+        for ( int i=0 ; i<nums.size();i++){
+        int temp = target - nums[i];
+
+        auto it = find(nums.begin() + i + 1,nums.end(),temp);
+
+        if ( it != nums.end()){
+                return { i , static_cast<int>(distance(nums.begin(),it))};
+
+             }
         }
+
        return {0}; 
     }
 };
