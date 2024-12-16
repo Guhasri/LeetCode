@@ -24,7 +24,6 @@ public:
             if(prices[i]<minPrice)
             {
                 minPrice=prices[i];
-                continue;
             }
             currentProfit=prices[i]-minPrice;
             if(currentProfit>maxProfit)
