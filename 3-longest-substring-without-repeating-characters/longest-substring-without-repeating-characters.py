@@ -2,7 +2,6 @@ class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         max_len=0
         temp=list()
-        if len(s)==1: return 1
         for i in s:
             if i not in temp:
                 temp.append(i)
